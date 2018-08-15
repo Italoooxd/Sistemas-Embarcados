@@ -1,0 +1,26 @@
+1. 
+	R:São sistemas utilizados para realizar uma determinada função.
+
+2.
+	R:São sistemas encapsulados em micro chips com baixo uso de energia.
+	
+3. 
+	(a) Para a indústria automotiva;
+    	R:Eles podem ser utilizados para alertar uma situação indesejada no carro, como por exemplo, baixo nível combustível, 
+	portas abertas com o carro em movimento, motorista sem o cinto de segurança, etc.
+	ou para acionar algum dispositivo de segurança, como por exemplo, acionamento do airbag.
+	
+	(b) Para eletrodomésticos;
+    	R:Eles podem ser utilizados para controle da velocidade de uma máquina de lavar, controle de temperatura de uma geladeira
+	e como alerta em uma cafeteira para avisar o usuário que o café está pronto.
+	
+	(c) Para automação industrial.
+    	R:Eles podem ser utilizados em sistemas de controle para movimentação de um braço robótico ou controle de esteiras.
+	
+4. 
+   	R:ASICs, DSPs, FPGAs e SoCs. ASISCs são circuitos integrados de aplicação específica enquanto os 
+    	DSPs são microcontroladores dedicados a processamento de sianl as FPGAs
+são circuitos integrados reconfiguráveis onde as conexões são feitas dentro do chip de acordo com o desejo do projetista e os SoCs são sistemas semelhantes a microcontroladores que possuem mais componentes similares a um computador assi mcomo um sistema operacional. 
+
+5.
+    R: Por que com a raspberry pi possui uma especificação de hardware superior e um sistema operacional basseado em linux assim como ocupa pouco espaço.
