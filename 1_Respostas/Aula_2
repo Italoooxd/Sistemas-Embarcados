@@ -1,13 +1,13 @@
 
 
     Por que o Linux recebeu esse nome?
-    R:
+    R:É a união do nome unix com o criador do Linux, Linus.
 
     O que são daemons?
-    R:
+    R:É um programa executa um processo em segundo plano sem a interação do usuario
 
     O que é o shell?
-    R:
+    R:É a interface em que o usuário acessa o sistema operacional
 
     Por que é importante evitar executar o terminal como super-usuário?
     R: Para evitar que o usuário faça alguma alteração importante no sistema.
