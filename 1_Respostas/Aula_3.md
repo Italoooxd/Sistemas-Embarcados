@@ -4,7 +4,7 @@ Para todas as questões, compile-as com o gcc e execute-as via terminal.
 
     1.
     
-    ```C
+```C    
       #include <stdio.h>
       #include <stdlib.h>
 
@@ -15,10 +15,10 @@ Para todas as questões, compile-as com o gcc e execute-as via terminal.
         printf("Ola mundo !! \n");
         return 0;
       }
-     ```
+```      
 
     2.
-    ```C
+```C
       #include <stdio.h>
       #include <stdlib.h>
 
@@ -32,7 +32,7 @@ Para todas as questões, compile-as com o gcc e execute-as via terminal.
         printf("Ola %s \n",str);
         return 0;
       }
-      ```
+```
 
     3.Apresente os comportamentos do código anterior nos seguintes casos:
     
