@@ -53,13 +53,13 @@ R:Digite o seu nome: Ola Eu
 
 R: Digite o seu nome: Ola Eu.
 
-(e) Se é usado um pipe com mais de um nome entre aspas duplas. Por exemplo:
+(e) 
 
-R:Digite o seu nome: Ola Eu 
+R:Aparece "Digite o seu nome: Ola Eu" 
 
-(f) Se é usado o redirecionamento de arquivo. Por exemplo:
+(f) 
 
-R:Digite o seu nome: Ola Ola 
+R:aparece "Digite o seu nome: Ola Ola" 
 
     4.Crie um código em C que recebe o nome do usuário como um argumento de entrada (usando as variáveis argc e *argv[]), e imprime no terminal "Ola " e o nome do usuário. Por exemplo, considerando que o código criado recebeu o nome de 'ola_usuario_2':
 
