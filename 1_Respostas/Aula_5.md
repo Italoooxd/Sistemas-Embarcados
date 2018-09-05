@@ -5,7 +5,8 @@
 (a) Quais são as funções (e seus protótipos) para abrir e fechar arquivos?
 ```C
 
-FILE =  *fopen ()
+FILE fp  =  *fopen ();
+FILE fp = *fclose();
 
 ```
 
