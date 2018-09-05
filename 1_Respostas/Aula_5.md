@@ -7,8 +7,6 @@
 
 FILE =  *fopen ()
 
-```C
-
 (b) Quais são as funções (e seus protótipos) para escrever em arquivos?
 
 (c) Quais são as funções (e seus protótipos) para ler arquivos?
