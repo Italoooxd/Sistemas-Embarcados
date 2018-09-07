@@ -61,7 +61,7 @@ R:Aparece "Digite o seu nome: Ola Eu"
 
 R:aparece "Digite o seu nome: Ola Ola" 
 
-    4.Crie um código em C que recebe o nome do usuário como um argumento de entrada (usando as variáveis argc e *argv[]), e imprime no terminal "Ola " e o nome do usuário. Por exemplo, considerando que o código criado recebeu o nome de 'ola_usuario_2':
+    4.
 
 ```C
 #include <stdio.h>
@@ -81,10 +81,12 @@ return 0;
     5.Apresente os comportamentos do código anterior nos seguintes casos:
 
 (a)
+
     R: Ele só irá imprimir o primeiro nome no caso : Ola Eu
     
 
 (b) 
+
     R: Ele irá imprimir os dois nomes : Ola Eu mesmo
 
 (c) 
