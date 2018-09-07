@@ -106,11 +106,26 @@ return 0;
 
     R:Ele irá imprimir: Ola (null), pois não há argumento para a variavel argv. 
 
-    6.Crie um código em C que faz o mesmo que o código da questão 4, e em seguida imprime no terminal quantos valores de entrada foram fornecidos pelo usuário. Por exemplo, considerando que o código criado recebeu o nome de 'ola_usuario_3':
+    6.
+```C
+#include <stdio.h>
+#include <stdlib.h>
 
-$ ./ola_usuario_3 Eu
-$ Ola Eu
-$ Numero de entradas = 2
+
+int main(int argc, char **argv)
+{
+	int i;
+	int x;
+
+
+	printf("Ola %s \n",argv[1]);
+
+	printf("Número de entradas = %d \n",argc);
+
+return 0;
+}
+
+```
 
     7.Crie um código em C que imprime todos os argumentos de entrada fornecidos pelo usuário. Por exemplo, considerando que o código criado recebeu o nome de 'ola_argumentos':
 
