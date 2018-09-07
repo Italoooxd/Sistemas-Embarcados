@@ -63,35 +63,46 @@ R:aparece "Digite o seu nome: Ola Ola"
 
     4.Crie um código em C que recebe o nome do usuário como um argumento de entrada (usando as variáveis argc e *argv[]), e imprime no terminal "Ola " e o nome do usuário. Por exemplo, considerando que o código criado recebeu o nome de 'ola_usuario_2':
 
-$ ./ola_usuario_2 Eu
-$ Ola Eu
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(int argc, char **argv)
+{
+
+
+printf("Ola %s \n",argv[1]);
+return 0;
+}
+
+```
 
     5.Apresente os comportamentos do código anterior nos seguintes casos:
 
-(a) Se o usuário insere mais de um nome.
+(a)
+    R: Ele só irá imprimir o primeiro nome no caso : Ola Eu
+    
 
-$ ./ola_usuario_2 Eu Mesmo
+(b) 
+    R: Ele irá imprimir os dois nomes : Ola Eu mesmo
 
-(b) Se o usuário insere mais de um nome entre aspas duplas. Por exemplo:
+(c) 
 
-$ ./ola_usuario_2 "Eu Mesmo"
+    R:Ele irá imprimir: Ola (null), pois não há argumento para a variavel argv. 
 
-(c) Se é usado um pipe. Por exemplo:
 
-$ echo Eu | ./ola_usuario_2
+(d)
 
-(d) Se é usado um pipe com mais de um nome. Por exemplo:
+    R:Ele irá imprimir: Ola (null), pois não há argumento para a variavel argv. 
 
-$ echo Eu Mesmo | ./ola_usuario_2
+(e) 
 
-(e) Se é usado um pipe com mais de um nome entre aspas duplas. Por exemplo:
+    R:Ele irá imprimir: Ola (null), pois não há argumento para a variavel argv.     
 
-$ echo Eu Mesmo | ./ola_usuario_2
+(f) 
 
-(f) Se é usado o redirecionamento de arquivo. Por exemplo:
-
-$ echo Ola mundo cruel! > ola.txt
-$ ./ola_usuario_2 < ola.txt
+    R:Ele irá imprimir: Ola (null), pois não há argumento para a variavel argv. 
 
     6.Crie um código em C que faz o mesmo que o código da questão 4, e em seguida imprime no terminal quantos valores de entrada foram fornecidos pelo usuário. Por exemplo, considerando que o código criado recebeu o nome de 'ola_usuario_3':
 
