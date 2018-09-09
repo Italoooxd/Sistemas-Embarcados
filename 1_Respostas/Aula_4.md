@@ -4,7 +4,8 @@ Para todas as questões, utilize as funções da biblioteca stdio.h de leitura e
 
     1.
     
-```C#include <stdio.h>
+```C
+#include <stdio.h>
 #include <stdlib.h>
 
 int main(int argc, const char * argv[]) {
