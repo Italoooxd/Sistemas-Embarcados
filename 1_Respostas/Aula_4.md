@@ -2,8 +2,23 @@
 
 Para todas as questões, utilize as funções da biblioteca stdio.h de leitura e de escrita em arquivo (fopen(), fclose(), fwrite(), fread(), dentre outras). Compile os códigos com o gcc e execute-os via terminal.
 
-    1.Crie um código em C para escrever "Ola mundo!" em um arquivo chamado 'ola_mundo.txt'.
+    1.
+    
+```C#include <stdio.h>
+#include <stdlib.h>
 
+int main(int argc, const char * argv[]) {
+  FILE *fp;
+  char string[100] = "Ola mundo !!";
+  int i;
+  fp = fopen("ola_mundo.txt","w");
+  
+  	fputs(string, fp);                                         
+  	putc('\n', fp);
+  	fclose(fp);
+  return 0;
+}
+```
     2.Crie um código em C que pergunta ao usuário seu nome e sua idade, e escreve este conteúdo em um arquivo com o seu nome e extensão '.txt'. Por exemplo, considerando que o código criado recebeu o nome de 'ola_usuario_1':
 
 $ ./ola_usuario_1
