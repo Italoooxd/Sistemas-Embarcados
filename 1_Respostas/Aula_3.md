@@ -201,7 +201,7 @@ return 0;
 ```
 
     9.Crie um Makefile para a questão anterior.
-```C
+
 num_caracs: aula.o num_caracs.o
 	gcc $(CFLAGS) -o num_caracs aula.o num_caracs.o
 aula.o: aula.c num_caracs.h
@@ -212,12 +212,31 @@ clean:
 
 	rm -f *.o num_caracs
 
-```
 
     Re-utilize o objeto criado na questão 8 para criar um código que imprime o total de caracteres nos argumentos de entrada. Por exemplo, considerando que o código criado recebeu o nome de 'ola_num_caracs_2':
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include "num_caracs.h"
 
-$ ./ola_num_caracs_2 Eu Mesmo
-$ Total de caracteres de entrada: 25
 
+int main(int argc, char **argv)
+{
+	int x = 0;
+	int carac ;
+	
+	while (x < argc){
+	
+	carac = carac + num_caracs(argv[x]);		
+	
+	x++;
+	}
+	printf("Total de caracteres de entrada: %d \n", carac);
+
+return 0;
+}
+
+```
+    
     10.Crie um Makefile para a questão anterior.
 
