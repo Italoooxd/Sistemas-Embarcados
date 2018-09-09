@@ -129,11 +129,51 @@ return 0;
 
     7.Crie um código em C que imprime todos os argumentos de entrada fornecidos pelo usuário. Por exemplo, considerando que o código criado recebeu o nome de 'ola_argumentos':
 
-$ ./ola_argumentos Eu Mesmo e Minha Pessoa
-$ Argumentos: Eu Mesmo e Minha Pessoa
+```C
+#include <stdio.h>
+#include <stdlib.h>
 
+
+int main(int argc, char **argv)
+{
+	int x = 1;
+
+	printf("Argumentos: ");
+	
+	while (x < argc){
+	printf("%s ", argv[x]);
+	x++;
+	}
+	printf ("\n");
+return 0;
+}
+
+```
     8.Crie uma função que retorna a quantidade de caracteres em uma string, usando o seguinte protótipo: int Num_Caracs(char *string); Salve-a em um arquivo separado chamado 'num_caracs.c'. Salve o protótipo em um arquivo chamado 'num_caracs.h'. Compile 'num_caracs.c' para gerar o objeto 'num_caracs.o'.
+```C
+%num_caracs.c
 
+#include "num_caracs.h"
+
+int Num_Caracs(char *string){
+	
+	int i = 0;
+	
+	while(string[i] != '\0'){
+		i++;
+		
+	} 
+	return i;
+
+}
+
+```
+```C
+%numcaracs.h
+
+int num_caracs (char *string);
+
+```
     Re-utilize o objeto criado na questão 8 para criar um código que imprime cada argumento de entrada e a quantidade de caracteres de cada um desses argumentos. Por exemplo, considerando que o código criado recebeu o nome de 'ola_num_caracs_1':
 
 $ ./ola_num_caracs_1 Eu Mesmo
