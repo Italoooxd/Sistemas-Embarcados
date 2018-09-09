@@ -127,7 +127,7 @@ return 0;
 
 ```
 
-    7.Crie um código em C que imprime todos os argumentos de entrada fornecidos pelo usuário. Por exemplo, considerando que o código criado recebeu o nome de 'ola_argumentos':
+    7.
 
 ```C
 #include <stdio.h>
@@ -149,9 +149,10 @@ return 0;
 }
 
 ```
-    8.Crie uma função que retorna a quantidade de caracteres em uma string, usando o seguinte protótipo: int Num_Caracs(char *string); Salve-a em um arquivo separado chamado 'num_caracs.c'. Salve o protótipo em um arquivo chamado 'num_caracs.h'. Compile 'num_caracs.c' para gerar o objeto 'num_caracs.o'.
+    8.
+    
 ```C
-%num_caracs.c
+//num_caracs.c
 
 #include "num_caracs.h"
 
@@ -169,17 +170,35 @@ int Num_Caracs(char *string){
 
 ```
 ```C
-%numcaracs.h
+//numcaracs.h
 
 int num_caracs (char *string);
 
 ```
     Re-utilize o objeto criado na questão 8 para criar um código que imprime cada argumento de entrada e a quantidade de caracteres de cada um desses argumentos. Por exemplo, considerando que o código criado recebeu o nome de 'ola_num_caracs_1':
 
-$ ./ola_num_caracs_1 Eu Mesmo
-$ Argumento: ./ola_num_caracs_1 / Numero de caracteres: 18
-$ Argumento: Eu / Numero de caracteres: 2
-$ Argumento: Mesmo / Numero de caracteres: 5
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include "num_caracs.h"
+
+
+int main(int argc, char **argv)
+{
+	int x = 0;
+	int carac ;
+	
+	while (x < argc){
+	
+	carac = num_caracs(argv[x]);		
+	printf("Argumentos: %s / Numero de caracteres: %d \n", argv[x], carac);
+	x++;
+	}
+	printf ("\n");
+return 0;
+}
+
+```
 
     9.Crie um Makefile para a questão anterior.
 
