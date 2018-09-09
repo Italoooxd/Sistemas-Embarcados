@@ -200,8 +200,9 @@ return 0;
 
 ```
 
-    9.Crie um Makefile para a questão anterior.
-
+    9.
+    
+```C
 num_caracs: aula.o num_caracs.o
 	gcc $(CFLAGS) -o num_caracs aula.o num_caracs.o
 aula.o: aula.c num_caracs.h
@@ -211,9 +212,10 @@ num_caracs.o: num_caracs.c num_caracs.h
 clean:
 
 	rm -f *.o num_caracs
-
+```
 
     Re-utilize o objeto criado na questão 8 para criar um código que imprime o total de caracteres nos argumentos de entrada. Por exemplo, considerando que o código criado recebeu o nome de 'ola_num_caracs_2':
+    
 ```C
 #include <stdio.h>
 #include <stdlib.h>
@@ -238,5 +240,17 @@ return 0;
 
 ```
     
-    10.Crie um Makefile para a questão anterior.
+    10.
+    
+```C
+num_caracs: ola_num_caracs_2.o num_caracs.o
+	gcc $(CFLAGS) -o num_caracs ola_num_caracs_2.o num_caracs.o
+ola_num_caracs_2.o: ola_num_caracs_2.c num_caracs.h
+	gcc $(CFLAGS) -c ola_num_caracs_2.c
+num_caracs.o: num_caracs.c num_caracs.h
+	gcc $(CFLAGS) -c num_caracs.c
+clean:
 
+	rm -f *.o num_caracs
+
+```
