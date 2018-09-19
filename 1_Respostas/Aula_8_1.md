@@ -3,8 +3,10 @@
     1.Quais são as vantagens e desvantagens em utilizar:
 
 (a) fork?
-
+	
 (b) threads?
+
+	É possível ter varias threads em uma mesma aplição podem utilizar a mesma variável, risco de corrupção de dados                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 
     2.Quantas threads serão criadas após as linhas de código a seguir? Quantas coexistirão? Por quê?
 
