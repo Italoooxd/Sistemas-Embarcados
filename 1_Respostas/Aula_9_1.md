@@ -3,20 +3,31 @@
     1.Com relação ao modelo cliente-servidor, responda:
 
 (a) Quais são as características básicas deste modelo?
+    R:
 
-(b) Quais são as características básicas do servidor?
+(b) 
+    R:Socket passivo, aguarda passivamente, responde aos clientes.
 
-(c) Quais são as características básicas do cliente?
+(c) 
+    R:Socket ativo, de ter conhecimento do ip e porta do servidor e inicia a comunicação.
+    
+    2.
 
-    2.Com relação ao protocolo de comunicação da internet, responda:
-
-(a) O que são protocolos de comunicação?
-
-(b) Quais são as características básicas de protocolos de comunicação?
-
-    3.Com relação ao protocolo TCP, responda:
-
-(a) O que são portas no protocolo TCP?
-
-(b) Para que servem estas portas?
-
+(a) 
+```bash
+    R:São convenções para possibilitar a comunicação e possibilita tranferencia de dados entre dois sistemas computacionais.
+```
+(b) 
+```bash
+    R:Detecção da conexão física, envia e recebe dados e criação de um socket.
+    
+    3.
+```
+(a) 
+```bash
+    R:É um software de aplicação especifica ou processo especifico servindo de ponto final entre a comucação de um cliente e um servidor.
+```
+(b) 
+```bash
+    R:Servem para destinguir os diferente tipos de dados.
+```
