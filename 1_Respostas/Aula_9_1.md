@@ -3,7 +3,7 @@
     1.Com relação ao modelo cliente-servidor, responda:
 
 (a) Quais são as características básicas deste modelo?
-    R:
+    R:Existe um cliente que envia a informação e um servidor que recebe essa informação.
 
 (b) 
     R:Socket passivo, aguarda passivamente, responde aos clientes.
