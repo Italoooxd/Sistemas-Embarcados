@@ -20,26 +20,128 @@ int main(int argc, const char * argv[]) {
   return 0;
 }
 ```
-    2.Crie um código em C que pergunta ao usuário seu nome e sua idade, e escreve este conteúdo em um arquivo com o seu nome e extensão '.txt'. Por exemplo, considerando que o código criado recebeu o nome de 'ola_usuario_1':
+    2.
+```C
+#include <stdio.h>
+#include <stdlib.h>
 
-$ ./ola_usuario_1
-$ Digite o seu nome: Eu
-$ Digite a sua idade: 30
-$ cat Eu.txt
-$ Nome: Eu
-$ Idade: 30 anos
+int main(int argc, const char * argv[]) {
+  FILE *fp;
+  char nome[100] ;
+  int idade;
 
-    3.Crie um código em C que recebe o nome do usuário e e sua idade como argumentos de entrada (usando as variáveis argc e *argv[]), e escreve este conteúdo em um arquivo com o seu nome e extensão '.txt'. Por exemplo, considerando que o código criado recebeu o nome de 'ola_usuario_2':
+  fp = fopen("ola_mundo.txt","w");
 
-$ ./ola_usuario_2 Eu 30
-$ cat Eu.txt
-$ Nome: Eu
-$ Idade: 30 anos
+ 	printf("Digite seu nome: ");
+ 	scanf("%s", nome);
+ 	printf("Digite sua idade: ");
+ 	scanf("%i", &idade); 
+ 	fprintf(fp, "Nome: %s\n", nome);
+ 	fprintf(fp, "Idade: %i\n", idade);
+  	fclose(fp);
+  return 0;
+}
 
-    4.Crie uma função que retorna o tamanho de um arquivo, usando o seguinte protótipo: int tam_arq_texto(char *nome_arquivo); Salve esta função em um arquivo separado chamado 'bib_arqs.c'. Salve o protótipo em um arquivo chamado 'bib_arqs.h'. Compile 'bib_arqs.c' para gerar o objeto 'bib_arqs.o'.
+```
 
-    5.Crie uma função que lê o conteúdo de um arquivo-texto e o guarda em uma string, usando o seguinte protótipo: char* le_arq_texto(char *nome_arquivo); Repare que o conteúdo do arquivo é armazenado em um vetor interno à função, e o endereço do vetor é retornado ao final. (Se você alocar este vetor dinamicamente, lembre-se de liberar a memória dele quando acabar o seu uso.) Salve esta função no mesmo arquivo da questão 4, chamado 'bib_arqs.c'. Salve o protótipo no arquivo 'bib_arqs.h'. Compile 'bib_arqs.c' novamente para gerar o objeto 'bib_arqs.o'.
+    3.
+```C
 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, const char * argv[]) {
+  FILE *fp;
+  char nome[100] ;
+  int idade;
+
+  fp = fopen("ola_mundo_2.txt","w");
+
+ 	fprintf(fp, "Nome: %s\n", argv[1]);
+ 	fprintf(fp, "Idade: %s\n", argv[2]);
+  	fclose(fp);
+  return 0;
+}
+
+```
+  
+    4.
+```C
+//bib_arqs.c
+#include "bib_arqs.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int tam_arq_texto(char *nome_arquivo) {
+  FILE *fp;
+  
+  int i=0;
+  char c;
+  fp = fopen(nome_arquivo,"r");
+  c = getc(fp);
+  while (!feof(fp))        
+    {
+    	i++;
+      	c = getc(fp);   
+    }
+    printf("Seu arquivo tem %i bytes\n",i);
+	fclose(fp);
+  return 0;
+}
+
+```
+```C
+//bib_arqs.h
+
+int tam_arq_texto(char *nome_arquivo);
+
+```
+    5.
+```C
+#include "bib_arqs.h"
+#include "le_arq_texto.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int tam_arq_texto(char *nome_arquivo) {
+  FILE *fp;
+  
+  int i=0;
+  char c;
+  fp = fopen(nome_arquivo,"r");
+  c = getc(fp);
+  while (!feof(fp))        
+    {
+    	i++;
+      	c = getc(fp);   
+    }
+    printf("Seu arquivo tem %i bytes\n",i);
+	fclose(fp);
+  return 0;
+}
+
+char* le_arq_texto(char *nome_arquivo){
+	FILE *p;
+	char arquivo[1000];
+	char c;
+	int i;
+	p = fopen(nome_arquivo,"r");
+    c = getc(p);
+    while (!feof(p))    
+    {
+        
+        arquivo[i] = c; 
+        c = getc(p);
+        i++;    
+    }
+    fclose(p);         
+
+
+}
+
+```
     6.Crie um código em C que copia a funcionalidade básica do comando cat: escrever o conteúdo de um arquivo-texto no terminal. Reaproveite as funções já criadas nas questões anteriores. Por exemplo, considerando que o código criado recebeu o nome de 'cat_falsificado':
 
 $ echo Ola mundo cruel! Ola universo ingrato! > ola.txt
