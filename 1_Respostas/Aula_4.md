@@ -104,7 +104,6 @@ int tam_arq_texto(char *nome_arquivo);
 #include <stdio.h>
 #include <stdlib.h>
 
-
 int tam_arq_texto(char *nome_arquivo) {
   FILE *fp;
   
@@ -117,15 +116,16 @@ int tam_arq_texto(char *nome_arquivo) {
     	i++;
       	c = getc(fp);   
     }
-    printf("Seu arquivo tem %i bytes\n",i);
+    //printf("Seu arquivo tem %i bytes\n",i);
 	fclose(fp);
-  return 0;
+  return i;
 }
 
 char* le_arq_texto(char *nome_arquivo){
 	FILE *p;
 	char arquivo[1000];
 	char c;
+  	char *f;
 	int i;
 	p = fopen(nome_arquivo,"r");
     c = getc(p);
@@ -136,18 +136,36 @@ char* le_arq_texto(char *nome_arquivo){
         c = getc(p);
         i++;    
     }
-    fclose(p);         
+    f = arquivo;
+    printf("%s",arquivo);  
+    fclose(p);
 
+    return f; 
 
 }
 
 ```
-    6.Crie um código em C que copia a funcionalidade básica do comando cat: escrever o conteúdo de um arquivo-texto no terminal. Reaproveite as funções já criadas nas questões anteriores. Por exemplo, considerando que o código criado recebeu o nome de 'cat_falsificado':
+    6.
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include "tam_arq_texto.h"
+#include "le_arq_texto.h"
 
-$ echo Ola mundo cruel! Ola universo ingrato! > ola.txt
-$ ./cat_falsificado ola.txt
-$ Ola mundo cruel! Ola universo ingrato!
 
+int main(int argc, const char * argv[]) {
+    
+    char arquivo[1000] = "ola.txt";
+ 
+    le_arq_texto(arquivo);
+    
+	return 0;
+}	
+
+```
+    
+    
+    
     7.Crie um código em C que conta a ocorrência de uma palavra-chave em um arquivo-texto, e escreve o resultado no terminal. Reaproveite as funções já criadas nas questões anteriores. Por exemplo, considerando que o código criado recebeu o nome de 'busca_e_conta':
 
 $ echo Ola mundo cruel! Ola universo ingrato! > ola.txt
