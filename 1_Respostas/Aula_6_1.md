@@ -1,5 +1,5 @@
 
-Como se utiliza o comando ps para:
+1.Como se utiliza o comando ps para:
 (a) Mostrar todos os processos rodando na máquina?
 
 (b) Mostrar os processos de um usuário?
@@ -8,9 +8,9 @@ Como se utiliza o comando ps para:
 
 (d) Mostrar a quanto tempo cada processo está rodando?
 
-De onde vem o nome fork()?
+2.De onde vem o nome fork()?
 
-Quais são as vantagens e desvantagens em utilizar:
+3.Quais são as vantagens e desvantagens em utilizar:
 
 (a) system()?
 
@@ -18,7 +18,7 @@ Quais são as vantagens e desvantagens em utilizar:
 
 É possível utilizar o exec() sem executar o fork() antes?
 
-Quais são as características básicas das seguintes funções:
+4.Quais são as características básicas das seguintes funções:
 
 (a) execp()?
 
