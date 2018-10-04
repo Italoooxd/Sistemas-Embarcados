@@ -1,18 +1,30 @@
 
-1.Como se utiliza o comando ps para:
-(a) Mostrar todos os processos rodando na máquina?
+1.
+(a)
 
-(b) Mostrar os processos de um usuário?
+ps -auc
 
-(c) Ordenar todos os processos de acordo com o uso da CPU?
+(b)
 
-(d) Mostrar a quanto tempo cada processo está rodando?
+ps -u "usuario"
+
+(c) 
+
+ps aux --sort=-pcpu
+
+(d) 
+
+ps aux --sort=start_time
 
 2.De onde vem o nome fork()?
+
+Vem de bifurcação.
 
 3.Quais são as vantagens e desvantagens em utilizar:
 
 (a) system()?
+
+
 
 (b) fork() e exec()?
 
