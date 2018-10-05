@@ -24,7 +24,11 @@ São criadas duas threads, mas a primeira encerra sua execução antes da criaç
 
 (a) pthread_setcancelstate()
 
+Ajusta o estado de cancelamento da thread, habilitando ou desabilitando.
+
 (b) pthread_setcanceltype()
 
-(DICA: elas são relacionadas à função pthread_cancel().)
+Ajusta o tipo de cancelamento que será feito como, por exemplo, de maneira assincrona(a thread é cancelada a qualquer momento), ou o cacenlamento e preterido até a chamada da função cancell point.
+
+
 
