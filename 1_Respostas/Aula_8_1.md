@@ -4,7 +4,7 @@
 
 (a) fork?
 
-	Possuem memorias distintar e é possível criar varios processos filhos.
+	Possuem memorias distinta e é possível criar varios processos filhos.
 	
 (b) threads?
 
